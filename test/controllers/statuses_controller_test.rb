@@ -19,6 +19,8 @@ class StatusesControllerTest < ActionController::TestCase
 
   test "debe iniciar session para hacer una propuesta"  do 
     post :create, status: { contenido: "hola mundo"}
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
 
   end
 
