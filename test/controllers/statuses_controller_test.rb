@@ -17,7 +17,10 @@ class StatusesControllerTest < ActionController::TestCase
     assert_redirected_to new_user_session_path
   end
 
-  
+  test "debe iniciar session para hacer una propuesta"  do 
+    post :create, status: { contenido: "hola mundo"}
+
+  end
 
   test "should create status" do
     assert_difference('Status.count') do
