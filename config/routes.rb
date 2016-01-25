@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'perfil/show'
+
   get "perfil/show"
   devise_for :users
 
